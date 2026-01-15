@@ -1,82 +1,122 @@
 import Navbar from "@/components/Navbar";
-import Section from "@/components/Section";
+import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import { siteConfig } from "@/data/config";
+import { motion } from "framer-motion";
+import { ExternalLink, Calendar, ImageOff } from "lucide-react";
 
 export default function Leadership() {
-    return (
-        <>
-            <Navbar />
-            <main className="px-8 max-w-6xl mx-auto">
+  return (
+    <div className="min-h-screen bg-background text-text-main">
+      <Navbar />
 
-                <Section title="Leadership & Initiative">
-                    <p className="text-gray-400 max-w-3xl mb-12 text-lg">
-                        I strongly believe that leadership is about ownership and execution.
-                        Alongside my technical journey, I have actively led and supported
-                        large-scale academic and technical events.
+      <main className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+        
+        {/* HEADER */}
+        <div className="mb-24 text-center">
+          <Reveal>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Leadership & <span className="text-primary">Community</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
+              Real leadership is proven by execution. Here are the specific initiatives 
+              I have led, from national hackathons to international conferences.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* EVENTS LOOP */}
+        <div className="space-y-32">
+          {siteConfig.leadership.map((item, index) => (
+            <section key={item.id} className="relative">
+              {/* Decorative line */}
+              {index !== siteConfig.leadership.length - 1 && (
+                <div className="absolute left-8 top-16 bottom-[-128px] w-px bg-white/5 md:hidden" />
+              )}
+
+              <Reveal>
+                <div className="flex flex-col md:flex-row gap-6 mb-8 items-start">
+                  
+                  {/* Icon */}
+                  <div className="p-4 rounded-2xl bg-white/5 text-primary shrink-0 relative z-10 bg-background">
+                    {item.icon}
+                  </div>
+
+                  {/* Content */}
+                  <div className="max-w-2xl w-full">
+                    <div className="flex items-center gap-3 mb-2 text-sm text-text-muted font-mono">
+                      <span className="flex items-center gap-1">
+                        <Calendar size={14} /> {item.year}
+                      </span>
+                      <span>•</span>
+                      <span className="text-primary">{item.role}</span>
+                    </div>
+                    
+                    <h2 className="text-3xl font-bold mb-4">{item.event}</h2>
+                    <p className="text-text-muted leading-relaxed text-lg mb-6">
+                      {item.description}
                     </p>
-                    <Reveal>
-                        <p className="max-w-3xl text-gray-300 mb-12">
-                            Beyond technical work, I actively take responsibility in
-                            organizing, coordinating, and contributing to large-scale
-                            academic and technical events. These experiences strengthened
-                            my ability to lead teams, manage execution, and communicate
-                            effectively under real-world constraints.
+
+                    {/* LINKS SECTION (UPDATED) */}
+                    <div className="flex flex-wrap gap-4">
+                      {item.links && item.links.map((link, i) => (
+                        <a 
+                          key={i}
+                          href={link.url}
+                          target="_blank"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm font-medium text-white transition-colors border border-white/5 hover:border-primary/30"
+                        >
+                          <ExternalLink size={14} />
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* GALLERY */}
+              <Reveal delay={0.2}>
+                <div className={`
+                  grid gap-4 mt-8
+                  ${item.images.length === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3"}
+                `}>
+                  {item.images.map((img, imgIndex) => (
+                    <div 
+                      key={imgIndex} 
+                      className="group relative h-48 rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+                    >
+                      <img 
+                        src={img.src} 
+                        alt={img.caption}
+                        className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none"; 
+                          e.currentTarget.nextElementSibling?.classList.remove("hidden");
+                        }}
+                      />
+                      <div className="hidden absolute inset-0 flex flex-col items-center justify-center text-gray-500 bg-surface p-2 text-center">
+                        <ImageOff className="mb-2 opacity-50" />
+                        <span className="text-[10px] font-mono break-all">{img.src}</span>
+                      </div>
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <p className="text-white text-xs font-medium translate-y-2 group-hover:translate-y-0 transition-transform">
+                          {img.caption}
                         </p>
-                    </Reveal>
-
-                    <div className="space-y-10">
-
-                        <Reveal>
-                            <div className="bg-card border border-gray-800 rounded-2xl p-6">
-                                <h3 className="text-lg font-medium text-accent">
-                                    National-Level Hackathon Organizer (2×)
-                                </h3>
-                                <p className="text-gray-300 mt-3">
-                                    Led and coordinated two national-level hackathons involving
-                                    multi-institution participation. Responsibilities included
-                                    planning, logistics, technical coordination, volunteer
-                                    management, and execution.
-                                </p>
-                            </div>
-                        </Reveal>
-
-                        <Reveal delay={0.1}>
-                            <div className="bg-card border border-gray-800 rounded-2xl p-6">
-                                <h3 className="text-lg font-medium text-accent">
-                                    Volunteer – MIKE Conference (10th Edition)
-                                </h3>
-                                <p className="text-gray-300 mt-3">
-                                    Volunteered for the 10th edition of the MIKE Conference,
-                                    assisting in event coordination, participant support, and
-                                    on-ground operations for an international academic event.
-                                </p>
-                            </div>
-                        </Reveal>
-
+                      </div>
                     </div>
-                </Section>
+                  ))}
+                </div>
+              </Reveal>
 
-                <Section title="Event Gallery (Coming Soon)">
-                    <p className="text-gray-400 mb-6">
-                        This section will showcase selected moments from events I
-                        organized or volunteered for.
-                    </p>
+            </section>
+          ))}
+        </div>
 
-                    {/* PHOTO GRID PLACEHOLDER */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="h-48 bg-card border border-dashed border-gray-700 rounded-xl flex items-center justify-center text-gray-500">
-                            Event Photo
-                        </div>
-                        <div className="h-48 bg-card border border-dashed border-gray-700 rounded-xl flex items-center justify-center text-gray-500">
-                            Event Photo
-                        </div>
-                        <div className="h-48 bg-card border border-dashed border-gray-700 rounded-xl flex items-center justify-center text-gray-500">
-                            Event Photo
-                        </div>
-                    </div>
-                </Section>
-
-            </main>
-        </>
-    );
+      </main>
+      <Footer />
+    </div>
+  );
 }
