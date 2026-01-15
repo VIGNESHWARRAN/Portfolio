@@ -1,20 +1,22 @@
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Section from "@/components/Section";
 
 export default function About() {
   return (
     <>
       <Navbar />
-      <main className="px-8 py-16 max-w-4xl mx-auto text-gray-300">
-        <h2 className="text-3xl font-semibold">About Me</h2>
+      <main className="px-8 max-w-4xl mx-auto">
 
-        <p className="mt-6">
-          I am an Applied AI & ML Engineer focused on building practical,
-          production-oriented machine learning systems. I care about robustness,
-          interpretability, and real-world impact more than purely theoretical work.
-        </p>
+        <Section title="About Me">
+          <p className="text-gray-300 leading-relaxed">
+            I am an Applied AI & Machine Learning Engineer with a strong interest
+            in building systems that are practical, robust, and grounded in
+            real-world constraints. I enjoy structured problem-solving,
+            probabilistic thinking, and designing clean, maintainable systems.
+          </p>
+        </Section>
+
       </main>
-      <Footer />
     </>
   );
 }
