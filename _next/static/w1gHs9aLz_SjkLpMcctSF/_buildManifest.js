@@ -1,30 +1,33 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/191b3718eaa72f2a.js"
+    "static/chunks/a9d0fec9c1773b28.js"
   ],
   "/_error": [
     "static/chunks/265316195fe1c91d.js"
   ],
   "/about": [
-    "static/chunks/e7ef9cb7ed139034.js"
+    "static/chunks/f4ec00f0b3873806.js"
   ],
   "/ai-ml": [
-    "static/chunks/47a7cf37ece99132.js"
+    "static/chunks/e20d62e1c7e48405.js"
   ],
   "/blog": [
-    "static/chunks/2b7394a4246aa829.js"
+    "static/chunks/f69df1b14641888f.js"
+  ],
+  "/certificates": [
+    "static/chunks/e5fc320eb3d4e7ea.js"
   ],
   "/contact": [
-    "static/chunks/42d876d4f7c4fc17.js"
+    "static/chunks/bf7412def474e94d.js"
   ],
   "/leadership": [
-    "static/chunks/ed4b74cd6975a784.js"
+    "static/chunks/988ab2942fca920c.js"
   ],
   "/projects": [
-    "static/chunks/226187a5c9560339.js"
+    "static/chunks/fdba107d7b2efc05.js"
   ],
   "/resume": [
-    "static/chunks/20ef657e8a213306.js"
+    "static/chunks/8d8d8864a407ec4e.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -38,6 +41,7 @@ self.__BUILD_MANIFEST = {
     "/about",
     "/ai-ml",
     "/blog",
+    "/certificates",
     "/contact",
     "/leadership",
     "/projects",
