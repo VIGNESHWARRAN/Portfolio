@@ -136,7 +136,7 @@ export default function Home() {
                <div className="space-y-3">
                  <a href={siteConfig.socials[2].href} target="_blank" className="flex justify-between items-center text-sm text-text-muted hover:text-white border-b border-white/5 pb-2">
                    <span>LeetCode</span>
-                   <span className="text-white">Knight</span>
+                   <span className="text-white">Active</span>
                  </a>
                  <a href={siteConfig.socials[3].href} target="_blank" className="flex justify-between items-center text-sm text-text-muted hover:text-white border-b border-white/5 pb-2">
                    <span>CodeChef</span>

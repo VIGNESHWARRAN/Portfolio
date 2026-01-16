@@ -13,7 +13,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
-          Vigneshwarran<span className="text-primary">.</span>
+          Vigneshwarran S<span className="text-primary">.</span>
         </Link>
 
         <div className="hidden md:flex gap-8 text-sm font-medium text-text-muted">

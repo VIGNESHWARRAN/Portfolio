@@ -14,7 +14,7 @@ export default function Resume() {
           </p>
 
           <a
-            href="/resume.pdf"
+            href="public/resume.pdf"
             className="inline-block px-6 py-3 bg-accent text-black rounded-lg"
           >
             Download Resume
