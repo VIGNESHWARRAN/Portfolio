@@ -77,8 +77,7 @@ export default function Certificates() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
-              A verified track record of competitive programming wins, hackathon participations, 
-              [cite_start]and technical course completions[cite: 44, 45, 46].
+              A verified track record of competitive programming wins, hackathon participations.
             </p>
           </Reveal>
         </div>

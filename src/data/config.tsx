@@ -26,7 +26,7 @@ export const siteConfig = {
     stats: [
         {
             label: "LeetCode solved",
-            value: "215",
+            value: "222",
             icon: <Code size={16} />,
             link: "https://leetcode.com/u/Vigneshwarran_S/"
         },
@@ -44,7 +44,7 @@ export const siteConfig = {
         // },
         {
             label: "Codechef Rating",
-            value: "1372",
+            value: "1404 (2 Star Coder)",
             icon: <Terminal size={16} />,
             link: "https://www.codechef.com/users/vigneshwarran"
         },
@@ -57,7 +57,7 @@ export const siteConfig = {
             issuer: "Amrita Vishwa Vidyapeetham",
             date: "2023",
             type: "Competition Winning",
-            desc: "Secured 2nd place (₹1,500 prize) in a national blind CSS/Frontend coding competition, outperforming 150+ participants.",
+            desc: "Secured 2nd place (₹1,500 prize) in a national blind-duo coding competition, outperforming 150+ participants.",
             link: "" 
         },
         // 2. COMPETITION PARTICIPATION
@@ -165,9 +165,9 @@ export const siteConfig = {
             ],
 
             images: [
-                { src: "/hack_dec1.jpg", caption: "Hack-A-Ruckus 2025 Launch" },
-                { src: "/hack_dec2.jpg", caption: "FIASCO(DE) Challenge" },
-                { src: "/hack_dec3.jpg", caption: "Finale Prize Distribution" }
+                { src: "/hack_dec1.webp", caption: "Hack-A-Ruckus 2025 Launch" },
+                { src: "/hack_dec2.webp", caption: "FIASCO(DE) Challenge" },
+                { src: "/hack_dec3.webp", caption: "Finale Prize Distribution" }
             ]
         },
         {
@@ -202,9 +202,9 @@ export const siteConfig = {
             ],
 
             images: [
-                { src: "/hack_mar1.jpg", caption: "Event Team" },
-                { src: "/hack_mar2.jpg", caption: "Coding Phase" },
-                { src: "/hack_mar3.jpg", caption: "Event Instructions" }
+                { src: "/hack_mar1.webp", caption: "Event Team" },
+                { src: "/hack_mar2.webp", caption: "Coding Phase" },
+                { src: "/hack_mar3.webp", caption: "Event Instructions" }
             ]
         }
     ],
